@@ -1,0 +1,236 @@
+.admin-dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .admin-dashboard-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .admin-dashboard-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    background: #007bff;
+    color: white;
+  }
+  
+  .admin-dashboard-buttons button:hover {
+    background: #0056b3;
+  }
+  
+  /* Form Styling (Similar to Login.css) */
+  .admin-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .admin-form-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .admin-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .admin-form button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+  }
+  
+  .admin-form button:hover {
+    background-color: #218838;
+  }
+  
+
+  /* AdminDash.css */
+
+div {
+  padding: 20px;
+  color: black;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead tr {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.admin-container {
+  padding: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: sticky;
+  top: 0;
+
+  padding: 10px;
+  z-index: 10;
+
+}
+
+.tab-buttons button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.tab-buttons .active {
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.btn-donor {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-add {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn-requests {
+  background-color: #dc3545;
+  color: white;
+}
+
+.tab-buttons button:hover {
+  opacity: 0.8;
+}
+/* Form container */
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.form-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+/* Input fields and select dropdown */
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Button */
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 15px;
+  }
+}

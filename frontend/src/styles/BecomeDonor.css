@@ -1,0 +1,81 @@
+/* Full-screen styling for BecomeDonor component */
+body, html {
+  margin: 10px;
+  padding: 10px;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered form box, shifted downward */
+.donor-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px; /* Adjusted for better positioning */
+  padding-bottom: 80px;
+}
+
+.donor-box {
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for contrast */
+  padding: 50px; /* Reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 400px; /* Reduced max-width */
+  color: black;
+}
+
+.donor-title {
+  margin-bottom: 15px; /* Reduced margin */
+  color: #ff416c;
+  font-weight: bold;
+  font-size: 20px; /* Slightly smaller font */
+}
+
+/* Input and Select Fields */
+.donor-input, .donor-select {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  margin-bottom: 12px; /* Reduced spacing */
+  border: 1.5px solid #d32f2f;
+  border-radius: 6px;
+  font-size: 14px; /* Reduced font size */
+  transition: all 0.3s ease-in-out;
+}
+
+.donor-input:focus, .donor-select:focus {
+  border-color: #ff4d4d;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.4);
+}
+
+/* Stylish Button */
+.donor-button {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  background: #ff416c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem; /* Reduced font size */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.donor-button:hover {
+  background-color: #9a0007;
+  transform: scale(1.03);
+}
+
+.donor-button:active {
+  background-color: #7f0000;
+  transform: scale(0.97);
+}
