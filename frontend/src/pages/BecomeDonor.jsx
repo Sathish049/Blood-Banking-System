@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/BecomeDonor.css"; // Import CSS
+import "../styles/BecomeDonor.css"; 
 
 function BecomeDonor() {
   const [formData, setFormData] = useState({

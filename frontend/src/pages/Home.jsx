@@ -24,19 +24,15 @@ function Home() {
       <Navbar role={role} onLogout={handleLogout} />
       <div className="home-container">
         <img src="/home.jpg" alt="Blood Bank" className="background-image" />
-        
-        import { motion } from "framer-motion";
 
-<motion.h1
-  animate={{ scale: [1, 1.1, 1] }}
-  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-  className="animated-title"
->
-</motion.h1>
-        {/* Centered Title Without Background */}
-        <h1 className="animated-title">Welcome to Blood Bank System</h1>
+        <motion.h1
+          animate={{ scale: [1, 1.1, 1] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="animated-title"
+        >
+          Welcome to Blood Bank System
+        </motion.h1>
 
-        {/* Logout Button (Only if Logged In) */}
         {role && <button className="logout-button" onClick={handleLogout}>Logout</button>}
       </div>
     </>

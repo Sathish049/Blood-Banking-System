@@ -2,11 +2,10 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
-require("dotenv").config(); // Load env variables
+require("dotenv").config(); 
 
 const router = express.Router();
 
-// Signup Route
 router.post("/register", async (req, res) => {
   const { name, email, password, bloodGroup } = req.body;
 
@@ -29,7 +28,6 @@ router.post("/register", async (req, res) => {
   }
 });
 
-// Login Route
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 

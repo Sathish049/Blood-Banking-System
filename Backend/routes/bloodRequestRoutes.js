@@ -3,7 +3,6 @@ const router = express.Router();
 const BloodRequest = require("../models/BloodRequest");
 const Donor = require("../models/Donor");
 
-// ✅ Endpoint to search for available donors
 router.post("/search", async (req, res) => {
   const { bloodGroup } = req.body;
   try {
@@ -14,7 +13,6 @@ router.post("/search", async (req, res) => {
   }
 });
 
-//✅ Endpoint to request blood if unavailable
 router.post("/request", async (req, res) => {
   console.log(req.body);
   const { fullName, mobileNumber, email, bloodgroup, reason } = req.body;

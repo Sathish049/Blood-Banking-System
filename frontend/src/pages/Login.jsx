@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Login.css"; // Import the CSS file
+import "../styles/Login.css"; 
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -20,13 +20,13 @@ function Login() {
       const data = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("role", data.role); // Store role (admin/user)
+        localStorage.setItem("role", data.role); 
         alert("Login Successful!");
 
         if (data.role === "admin") {
-          navigate("/admin"); // Redirect admin to admin page
+          navigate("/admin"); 
         } else {
-          navigate("/"); // Redirect user to home page
+          navigate("/"); 
         }
       } else {
         alert(data.message);

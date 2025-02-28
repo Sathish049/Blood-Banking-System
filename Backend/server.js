@@ -8,26 +8,23 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// MongoDB Connection
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log("MongoDB Error:", err));
 
-// Import Routes
 const authRoutes = require("./routes/authRoutes");
 const donorRoutes = require("./routes/donorRoutes");
 const bloodRequestRoutes = require("./routes/bloodRequestRoutes");
 const BloodRequest = require("./models/BloodRequest");
 
-// Use Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/donor", donorRoutes);
 app.use("/api/blood-request", bloodRequestRoutes);
 
 const adminSchema = new mongoose.Schema({
   password: String,
-  email: String, // Admin email added for contact form
+  email: String, 
 });
 
 const adminData = mongoose.model("admin", adminSchema);
@@ -55,7 +52,6 @@ app.post("/adminLogin", async (req, res) => {
 });
 
 
-// Define Donor Schema
 const donorSchema = new mongoose.Schema({
   fullName: String,
   mobileNumber: String,
@@ -68,7 +64,6 @@ const donorSchema = new mongoose.Schema({
 
 const Donor = mongoose.model("donor", donorSchema);
 
-// Fetch donors API
 app.get("/api/donors", async (req, res) => {
   try {
     const donors = await Donor.find();
@@ -102,10 +97,7 @@ app.delete("/api/donors/:id", async (req, res) => {
   }
 });
 
-// app.post("/api/blood-requests/request", async(req,res)=>{
-//   console.log("inside the blood request api");
-//   console.log(req.body);
-// })
+
 app.get("/api/blood-requests", async (req, res)=>{
   console.log("inside the blood-request controller");
 
@@ -119,6 +111,5 @@ app.get("/api/blood-requests", async (req, res)=>{
   }
 })
 
-// Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

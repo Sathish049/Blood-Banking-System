@@ -1,4 +1,3 @@
-/* Home Page */
 .home-container {
     position: relative;
     width: 100vw;
@@ -9,7 +8,6 @@
     justify-content: center;
 }
 
-/* Exact Fit Background Image */
 .background-image {
     position: absolute;
     top: 0;
@@ -19,7 +17,6 @@
     object-fit: cover;
 }
 
-/* Title Centered */
 .home-title {
     font-size: 3rem;
     font-weight: bold;
@@ -28,7 +25,6 @@
     position: absolute;
 }
 
-/* Logout Button */
 .logout-button {
     margin-top: 20px;
     padding: 10px 20px;

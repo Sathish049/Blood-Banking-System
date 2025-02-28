@@ -53,7 +53,6 @@ function NeedBlood() {
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:5000/api/blood-request//request",data);
-      //console.log('data submitted');
       alert(response.data.message);
     } catch (error) {
       console.error("Error submitting request:", error.message);

@@ -13,12 +13,10 @@ function Navbar({ role, onLogout }) {
     navigate("/");
   };
 
-  // Pages where only Home and About Us should be visible
   const isLoginPage = location.pathname === "/login";
   const isSignupPage = location.pathname === "/signup";
   const isAdminLoginPage = location.pathname === "/adminlogin";
 
-  // Pages where Login, Sign Up, and Admin Login should be hidden
   const isBecomeDonorPage = location.pathname === "/become-donor";
   const isNeedBloodPage = location.pathname === "/need-blood";
 
@@ -67,7 +65,6 @@ function Navbar({ role, onLogout }) {
   );
 }
 
-// ✅ Define PropTypes for role and onLogout function
 Navbar.propTypes = {
   role: PropTypes.string,
   onLogout: PropTypes.func.isRequired,

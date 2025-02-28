@@ -3,11 +3,10 @@ const Donor = require("../models/Donor");
 
 const router = express.Router();
 
-// Route to register a donor
 router.post("/register", async (req, res) => {
     const { fullName, mobileNumber, email, age, gender, bloodGroup, address } = req.body;
   
-    console.log("Received data:", req.body); // Debugging line
+    console.log("Received data:", req.body); 
   
     try {
       let donor = await Donor.findOne({ email });
@@ -18,12 +17,11 @@ router.post("/register", async (req, res) => {
   
       res.status(201).json({ msg: "Donor registered successfully" });
     } catch (err) {
-      console.error("Error saving donor:", err); // Debugging line
+      console.error("Error saving donor:", err); 
       res.status(500).json({ msg: "Server error" });
     }
   });
   
-// Route to find blood donors
 router.post("/search", async (req, res) => {
   const { bloodGroup } = req.body;
 

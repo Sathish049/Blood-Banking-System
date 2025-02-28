@@ -6,7 +6,7 @@ const BloodRequestSchema = new mongoose.Schema({
   email: { type: String, required: true },
   bloodGroup: { type: String, required: true },
   reason: { type: String, required: true },
-  status: { type: String, default: "Pending" }, // "Pending", "Approved", "Rejected"
+  status: { type: String, default: "Pending" }, 
 }, { timestamps: true });
 
 module.exports = mongoose.model("BloodRequest", BloodRequestSchema);

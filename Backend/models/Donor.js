@@ -10,6 +10,5 @@ const donorSchema = new mongoose.Schema({
   address: { type: String, required: true }
 });
 
-// FIX: Export only the model
 const Donor = mongoose.model("Donor", donorSchema);
 module.exports = Donor;

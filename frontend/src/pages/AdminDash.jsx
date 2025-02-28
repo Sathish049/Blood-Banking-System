@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import "../styles/AdminDash.css";
 import axios from "axios";
+import PropTypes from "prop-types";
+
 
 const DonorList = ({ refresh, onDelete }) => {
   const [donors, setDonors] = useState([]);
@@ -18,7 +20,7 @@ const DonorList = ({ refresh, onDelete }) => {
     };
 
     fetchDonors();
-  }, [refresh]); // Refresh donors when a new one is added
+  }, [refresh]); 
 
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this donor?")) return;
@@ -30,10 +32,9 @@ const DonorList = ({ refresh, onDelete }) => {
 
       if (!response.ok) throw new Error("Failed to delete donor");
 
-      // Update the donor list after deletion
       setDonors((prevDonors) => prevDonors.filter((donor) => donor._id !== id));
 
-      if (onDelete) onDelete(); // Call refresh function if provided
+      if (onDelete) onDelete(); 
     } catch (error) {
       console.error("Error deleting donor:", error);
     }
@@ -119,7 +120,7 @@ const AddDonor = ({ onDonorAdded }) => {
         address: "",
       });
 
-      onDonorAdded(); // Refresh donor list
+      onDonorAdded(); 
     } catch (error) {
       alert("Error adding donor");
       console.error("Error:", error);
@@ -225,7 +226,7 @@ const AdminDash = () => {
   const [refresh, setRefresh] = useState(false);
 
   const handleDonorAdded = () => {
-    setRefresh((prev) => !prev); // Toggle refresh state to update DonorList
+    setRefresh((prev) => !prev); 
   };
 
   return (
@@ -244,4 +245,16 @@ const AdminDash = () => {
   );
 };
 
+DonorList.propTypes = {
+  refresh: PropTypes.bool.isRequired,
+  onDelete: PropTypes.func, 
+};
+
+AddDonor.propTypes = {
+  onDonorAdded: PropTypes.func.isRequired, // Add this
+};
+
+BloodRequests.propTypes = {};
+
+AdminDash.propTypes = {};
 export default AdminDash;

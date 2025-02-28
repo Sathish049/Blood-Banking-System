@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PropTypes from "prop-types"; // ✅ Import PropTypes
+import PropTypes from "prop-types"; 
 import "../styles/AdminLogin.css";
 
 const AdminLogin = ({ setRole }) => {
@@ -31,8 +31,10 @@ const AdminLogin = ({ setRole }) => {
         setError(data.message || "Invalid credentials. Please try again.");
       }
     } catch (error) {
+      console.error("Login error:", error); // Logs the error in the console
       setError("Network error. Please try again later.");
     }
+    
   };
 
   return (
@@ -64,7 +66,6 @@ const AdminLogin = ({ setRole }) => {
   );
 };
 
-// ✅ Define prop types for ESLint
 AdminLogin.propTypes = {
   setRole: PropTypes.func.isRequired,
 };
